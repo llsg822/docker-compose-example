@@ -10,6 +10,6 @@ services:
       - api1
       - api2
   api1:
-    build: ./api
+    image: api-server-image
   api2:
-    build: ./api
+    image: api-server-image
