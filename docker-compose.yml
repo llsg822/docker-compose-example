@@ -11,5 +11,7 @@ services:
       - api2
   api1:
     image: api-server-image
+    stop_grace_period: 3s
   api2:
     image: api-server-image
+    stop_grace_period: 3s
