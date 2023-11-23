@@ -17,8 +17,6 @@ services:
     stop_grace_period: 1s
   minio:
     image: minio/minio
-    volumes:
-      - ./minio/.data:/data
     environment:
       MINIO_ACCESS_KEY: minio
       MINIO_SECRET_KEY: minio123
@@ -28,8 +26,6 @@ services:
       - 9001:9001
   postgresql:
     image: postgres:16-alpine
-    volumes:
-      - ./postgres/.data:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
